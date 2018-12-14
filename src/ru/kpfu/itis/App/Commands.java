@@ -5,7 +5,7 @@ public class Commands{
 
     /**
      * Number of entered symbol in enterned String
-     * @param prop:String where you find number of entered char
+     * @param prop:String where you find number of entered symbol
      * @param c: Simbol which number need to find
      * @return counter: symbol's number in entered string
      */
