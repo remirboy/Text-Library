@@ -71,7 +71,6 @@ public class Commands{
      * @param textWord: the word in your StringBuilder that you want to replace
      * @param newWord: the word that you want to put in your StringBuilder instead of another word
      */
-
     public static void replaceWord(StringBuilder text, String textWord, String newWord){
         int i = 0;
         while((i = text.indexOf(textWord, i)) >= 0){
@@ -80,6 +79,8 @@ public class Commands{
             i += newWord.length();
         }
     }
+
+
 
     /**
      * The number of entered word's repeat
@@ -107,5 +108,4 @@ public class Commands{
         }
         return counter;
     }
-
 }
