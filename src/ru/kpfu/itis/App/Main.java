@@ -1,21 +1,20 @@
-
-import java.util.Scanner;
-
+package ru.kpfu.itis.App;
 
 public class Main {
 
     public static void main(String[] args) {
-        String s = "Впервые термин «вики» для описания веб-сайта был использован в 1995 году Уордом Каннингемом, разработчиком первой вики-системы WikiWikiWeb, «Портлендского хранилища образцов» программного кода[2], созданной 25 марта 1995 года, который заимствовал слово гавайского языка, означающее «быстрый»[3][4]. Каннингем объяснил выбор названия движка тем, что он вспомнил работника международного аэропорта Гонолулу, посоветовавшего ему воспользоваться вики-вики шаттлом — небольшим автобусом, курсировавшим между терминалами аэропорта. Каннингем же планировал сделать движок, позволявший пользователям максимально быстро редактировать и создавать статьи. Каннингем первоначально описал вики как «простейшую онлайн-базу данных, которая может функционировать»[5]. Позже этому слову был придуман английский бэкроним «What I Know Is…» («то, что я знаю, это…»)[6].";
+        String s = "I was just was say about was this? What was are you are doing.... Nothing!";
 
-        int count=Commands.calcSentences(s);
+        int count = Commands.countSentences(s);
         System.out.println(count);
-        int count2=Commands.calcChar(s,'y');
+        int count2 = Commands.countChar(s, 'y');
         System.out.println(count2);
-        int count3=Commands.calcWords(s);
+        int count3 = Commands.countWords(s);
         System.out.println(count3);
         StringBuilder sb = new StringBuilder(s);
-        Commands.replaceWord(sb, "вики", "вввииикккиии");
+        Commands.replaceWord(sb, "Nothing", "Always");
         System.out.println(sb);
-
+        int count4 = Commands.countWordRepeat("was",s);
+        System.out.println(count4);
     }
 }

@@ -9,7 +9,7 @@ public class Commands{
      * @param c: Symbol which amount you need to find
      * @return counter: The number of symbol in the entered string
      */
-    public static int calcChar(String text, char c){
+    public static int countChar(String text, char c){
         int counter=0;
         int length =text.length();
         for (int i = 0; i<length;i++){
@@ -27,7 +27,7 @@ public class Commands{
      * @return counter: The number of sentences in the entered string
      */
 
-    public static int calcSentences(String text){
+    public static int countSentences(String text){
         int counter=0;
         int length =text.length();
         for (int i = 0; i<length;i++){
@@ -49,21 +49,19 @@ public class Commands{
      * @return counter: The number of words in the entered string
      */
 
-    public static int calcWords(String text) {
+    public static int countWords(String text) {
         int counter = 0;
         int length = text.length();
         for (int i = 0; i < length; i++) {
-            if ((text.charAt(i) == ' ')||(text.charAt(i) == '.')) {
-                if((text.charAt(i-1) == ' ')||(text.charAt(i-1) == '.')){
-                    continue;
-                }
-                else {
+            if ((text.charAt(i) == ' ') || (text.charAt(i) == '.')) {
+                if ((text.charAt(i - 1) == ' ') || (text.charAt(i - 1) == '.')) {
+                continue;
+                } else {
                     counter = counter + 1;
                 }
             }
         }
-        counter = counter++;
-        return counter;
+        return counter+1;
     }
 
    /**
@@ -73,6 +71,7 @@ public class Commands{
      * @param textWord: the word in your StringBuilder that you want to replace
      * @param newWord: the word that you want to put in your StringBuilder instead of another word
      */
+
     public static void replaceWord(StringBuilder text, String textWord, String newWord){
         int i = 0;
         while((i = text.indexOf(textWord, i)) >= 0){
@@ -80,6 +79,33 @@ public class Commands{
             text.insert(i, newWord);
             i += newWord.length();
         }
+    }
+
+    /**
+     * The number of entered word's repeat
+     * @param word: the word which repeat need to find
+     * @param text: string where you find word's repeat
+     * @return counter: number of entered word's repeat in the string
+     */
+
+    public static int countWordRepeat(String word,String text){
+        int counter=0;
+        int lengthw = word.length();
+        int lengths = text.length();
+        int j=0;
+        for (int i=0;i<lengths;i++){
+            if (text.charAt(i)==word.charAt(j)){
+                j++;
+                if (j==lengthw-1){
+                    counter++;
+                    j=0;
+                }
+            }
+            else {
+                j=0;
+            }
+        }
+        return counter;
     }
 
 }
