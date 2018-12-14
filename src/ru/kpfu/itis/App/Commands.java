@@ -5,15 +5,15 @@ public class Commands{
 
     /**
      * Number of entered symbol in enterned String
-     * @param prop:String where you find number of entered symbol
+     * @param text: String where you find number of entered symbol
      * @param c: Simbol which number need to find
      * @return counter: symbol's number in entered string
      */
-    public static int calcChar(String prop, char c){
+    public static int calcChar(String text, char c){
         int counter=0;
-        int length =prop.length();
+        int length =text.length();
         for (int i = 0; i<length;i++){
-            if(prop.charAt(i)==c){
+            if(text.charAt(i)==c){
                 counter = counter+1;
             }
         }
@@ -23,16 +23,16 @@ public class Commands{
 
     /**
      * Number of sentenses in entered sentence
-     * @param prop: String where you need to find numbers of sentences
+     * @param text: String where you need to find numbers of sentences
      * @return counter: numbers of sentences in enterned string
      */
 
-    public static int calcProp(String prop){
+    public static int calcSentences(String text){
         int counter=0;
-        int length =prop.length();
+        int length =text.length();
         for (int i = 0; i<length;i++){
-            if((prop.charAt(i)=='.')||(prop.charAt(i)=='!')||(prop.charAt(i)=='?')){
-                if((prop.charAt(i-1)=='.')||(prop.charAt(i-1)=='!')||(prop.charAt(i-1)=='?')){
+            if((text.charAt(i)=='.')||(text.charAt(i)=='!')||(text.charAt(i)=='?')){
+                if((text.charAt(i-1)=='.')||(text.charAt(i-1)=='!')||(text.charAt(i-1)=='?')){
                     continue;
                 }
                 else {
@@ -45,19 +45,25 @@ public class Commands{
 
     /**
      * Number of words in entered string
-     * @param prop: string where you need to count words
+     * @param text: string where you need to count words
      * @return counter: number of words in entered string
      */
 
-    public static int calcWords(String prop) {
+    public static int calcWords(String text) {
         int counter = 0;
-        int length = prop.length();
+        int length = text.length();
         for (int i = 0; i < length; i++) {
-            if (prop.charAt(i) == ' ') {
-                counter = counter + 1;
+            if ((text.charAt(i) == ' ')||(text.charAt(i) == '.')) {
+                if((text.charAt(i-1) == ' ')||(text.charAt(i-1) == '.')){
+                    continue;
+                }
+                else {
+                    counter = counter + 1;
+                }
             }
         }
-        return counter+1;
+        counter = counter++;
+        return counter;
     }
 
 }
