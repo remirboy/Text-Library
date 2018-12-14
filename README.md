@@ -22,3 +22,9 @@ Method's description: Replaces all words in the StringBuilder by another word
      param text: your StringBuilder
      param textWord: word in the text that you want to replace
      param newWord: word that replaces all textWord in the text
+     
+static int countWordRepeat(String word,String text)
+Method's description:The number of entered word's repeat
+     param word: the word which repeat need to find
+     param text: string where you find word's repeat
+     return counter: number of entered word's repeat in the string
