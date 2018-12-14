@@ -4,10 +4,10 @@ public class Commands{
 
 
     /**
-     * Number of entered symbol in enterned String
-     * @param text: String where you find number of entered symbol
-     * @param c: Simbol which number need to find
-     * @return counter: symbol's number in entered string
+     * The number of entered symbol in the entered String
+     * @param text: String where you need to find the number of entered symbol
+     * @param c: Symbol which amount you need to find
+     * @return counter: The number of symbol in the entered string
      */
     public static int calcChar(String text, char c){
         int counter=0;
@@ -22,9 +22,9 @@ public class Commands{
 
 
     /**
-     * Number of sentenses in entered sentence
-     * @param text: String where you need to find numbers of sentences
-     * @return counter: numbers of sentences in enterned string
+     * The number of sentenses in entered String
+     * @param text: String where you need to find the number of sentences
+     * @return counter: The number of sentences in the entered string
      */
 
     public static int calcSentences(String text){
@@ -44,9 +44,9 @@ public class Commands{
     }
 
     /**
-     * Number of words in entered string
-     * @param text: string where you need to count words
-     * @return counter: number of words in entered string
+     * The number of words in the entered string
+     * @param text: string where you need to count the number of words
+     * @return counter: The number of words in the entered string
      */
 
     public static int calcWords(String text) {
