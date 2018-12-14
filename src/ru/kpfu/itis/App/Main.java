@@ -3,6 +3,12 @@ package ru.kpfu.itis.App;
 import java.io.File;
 import java.util.Scanner;
 
+/**
+ * @author Remir Ziatdinov "remirboy@yandex.ru"
+ * @author Daniyar Sadikov
+ */
+
+
 public class Main {
 
     public static void main(String[] args) {

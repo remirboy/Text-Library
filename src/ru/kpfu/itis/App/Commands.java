@@ -3,7 +3,12 @@ package ru.kpfu.itis.App;
 public class Commands{
 
 
-
+    /**
+     * Number of entered symbol in enterned String
+     * @param prop:String where you find number of entered char
+     * @param c: Simbol which number need to find
+     * @return counter: symbol's number in entered string
+     */
     public static int calcChar(String prop, char c){
         int counter=0;
         int length =prop.length();
@@ -15,6 +20,12 @@ public class Commands{
         return counter;
     }
 
+
+    /**
+     * Number of sentenses in entered sentence
+     * @param prop: String where you need to find numbers of sentences
+     * @return counter numbers of sentences in enterned string
+     */
 
     public static int calcProp(String prop){
         int counter=0;
