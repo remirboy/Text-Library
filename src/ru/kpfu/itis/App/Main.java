@@ -1,8 +1,17 @@
 package ru.kpfu.itis.App;
 
+import java.io.File;
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        String s = "ygytgdt5asdads........jk..koik....!!!!!!????...red.??";
+
+        int count=Commands.calcProp(s);
+        System.out.println(count);
+
+      // File file = new File("C://Users//Ремир//Desktop//proj.txt");
+
     }
 }
