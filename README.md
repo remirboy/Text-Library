@@ -16,3 +16,9 @@ static int calcWords(String text)
 Method's description: Amount of the words in the entered String
      param text: String where you need to find the amount of the words
      return counter: Amount of the words in the entered string
+
+static void replaceWord (StringBuilder text, String textWord, String newWord)
+Method's description: Replaces all words in the StringBuilder by another word
+     param text: your StringBuilder
+     param textWord: word in the text that you want to replace
+     param newWord: word that replaces all textWord in the text
