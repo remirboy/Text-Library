@@ -12,10 +12,14 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        String s = "ygytgdt5asdads........jk..koik....!!!!!!????...red.??";
+        String s = "ygytgd t5asdads.. jk.. koik!? red.";
 
         int count=Commands.calcProp(s);
         System.out.println(count);
+        int count2=Commands.calcChar(s,'y');
+        System.out.println(count2);
+        int count3=Commands.calcWords(s);
+        System.out.println(count3);
 
       // File file = new File("C://Users//Ремир//Desktop//proj.txt");
 

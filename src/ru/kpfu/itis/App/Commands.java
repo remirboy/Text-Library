@@ -24,7 +24,7 @@ public class Commands{
     /**
      * Number of sentenses in entered sentence
      * @param prop: String where you need to find numbers of sentences
-     * @return counter numbers of sentences in enterned string
+     * @return counter: numbers of sentences in enterned string
      */
 
     public static int calcProp(String prop){
@@ -42,4 +42,22 @@ public class Commands{
         }
         return counter;
     }
+
+    /**
+     * Number of words in entered string
+     * @param prop: string where you need to count words
+     * @return counter: number of words in entered string
+     */
+
+    public static int calcWords(String prop) {
+        int counter = 0;
+        int length = prop.length();
+        for (int i = 0; i < length; i++) {
+            if (prop.charAt(i) == ' ') {
+                counter = counter + 1;
+            }
+        }
+        return counter+1;
+    }
+
 }
