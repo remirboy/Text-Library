@@ -52,16 +52,26 @@ public class Commands{
     public static int countWords(String text) {
         int counter = 0;
         int length = text.length();
+        if (text.charAt(0)==' '){
+            return 0;
+           }
         for (int i = 0; i < length; i++) {
             if ((text.charAt(i) == ' ') || (text.charAt(i) == '.')) {
                 if ((text.charAt(i - 1) == ' ') || (text.charAt(i - 1) == '.')) {
-                continue;
-                } else {
+                    continue;
+                }
+                else {
                     counter = counter + 1;
+                    }
                 }
             }
+            if (counter == 0) {
+                return 1;
+            }
+            else{
+                counter = counter + 1;
         }
-        return counter+1;
+        return counter;
     }
 
    /**
